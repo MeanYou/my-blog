@@ -5,7 +5,7 @@ import { http } from './http'
 import { router } from './router'
 import auth from './auth'
 import App from './App'
-import router from './router'
+import AppFooter from './components/app-footer'
 
 Vue.config.productionTip = false
 
@@ -15,6 +15,9 @@ sync(store, router)
 // 安装http和auth
 Vue.use(http)
 Vue.use(auth)
+
+// 注册全局组件
+Vue.component('')
 
 
 /* eslint-disable no-new */

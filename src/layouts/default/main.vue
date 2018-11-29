@@ -9,22 +9,17 @@
 </template>
 
 <script>
-import AppBar from '@/components/app-bar'
-import AppSidebar from '@/components/app-sidebar'
-import AppDialog from '@/components/app-dialog'
-import AppSnackbar from '@/components/app-snackbar'
-import AppFooter from '@/components/app-footer'
+import AppNav from '@/components/AppNav'
+import AppSidebar from '@/components/AppSidebar'
+import AppFooter from '@/components/AppFooter'
 
 export default {
   name: 'DefaultLayout',
 
-  components: { AppBar, AppSidebar, AppDialog, AppSnackbar, AppFooter },
+  components: { AppNav, AppSidebar, AppFooter },
 
   methods: {
 
   }
 }
 </script>
-
-<style lang="stylus">
-</style>

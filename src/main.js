@@ -17,8 +17,7 @@ Vue.use(http)
 Vue.use(auth)
 
 // 注册全局组件
-Vue.component('')
-
+Vue.component('AppFooter', AppFooter)
 
 /* eslint-disable no-new */
 new Vue({

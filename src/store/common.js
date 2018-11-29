@@ -45,5 +45,17 @@ export default {
       commit('clear');
       dispatch('auth/clear', {}, { root: true });
     },
+
+    updateSidebar({ commit }, options) {
+      commit('updateSidebar', options)
+    },
+
+    updateTitle ({ commit }, title) {
+      commit('updateTitle', title)
+    },
+
+    updateLayout ({ commit }, layout) {
+      commit('updateLayout', layout)
+    }
   }
 }

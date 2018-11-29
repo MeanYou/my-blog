@@ -2,10 +2,10 @@ import Vue from 'vue'
 import store from './store'
 import { sync } from 'vuex-router-sync'
 import { http } from './http'
-import { router } from './router'
+import router from './router'
 import auth from './auth'
 import App from './App'
-import AppFooter from './components/app-footer'
+import AppFooter from './components/AppFooter'
 
 Vue.config.productionTip = false
 

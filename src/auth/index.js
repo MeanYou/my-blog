@@ -4,7 +4,7 @@ import axios from 'axios'
 import * as constants from '@/constants'
 
 export default {
-  install(Vue, options) {
+  install (Vue, options) {
     Vue.prototype.$auth = Vue.auth = axios.create()
 
     this.setDefaults()

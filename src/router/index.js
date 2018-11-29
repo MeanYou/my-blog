@@ -8,10 +8,10 @@ Vue.use(Router)
 /**
  * 未认证用户无法访问的守卫路由
  */
-function guardRoute(to, from, next) {
+function guardRoute (to, from, next) {
   const auth = router.app.$options.store.state.auth
 
-  if(!auth.isLoggedIn) {
+  if (!auth.isLoggedIn) {
     next({ path: '/login', query: { redirect: to.fullPath } })
   } else {
     next()
@@ -24,7 +24,7 @@ const router = new Router({
     name: route.name,
     path: route.path,
     component: route.component,
-    beforeEnter: (to, from, next) {
+    beforeEnter: (to, from, next) => {
       // 进入路由之前的钩子，进行一些设置
       // document.title = route.title
       store.dispatch('common/updateTitle', route.title)

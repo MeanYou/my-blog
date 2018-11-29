@@ -38,7 +38,7 @@ const routes = [
     title: '账户信息',
     layout: 'DefaultLayout',
     isPublic: false
-  },
+  }
 ]
 
 export default routes

@@ -20,7 +20,7 @@ export default {
 
   mutations: {
     updateSidebar (state, options) {
-      state.sidebar = Object.assign({}, defaults.sidebar, options);
+      state.sidebar = Object.assign({}, defaults.sidebar, options)
     },
 
     updateTitle (state, title) {
@@ -42,11 +42,11 @@ export default {
 
   actions: {
     clear ({ state, commit, rootState, dispatch }) {
-      commit('clear');
-      dispatch('auth/clear', {}, { root: true });
+      commit('clear')
+      dispatch('auth/clear', {}, { root: true })
     },
 
-    updateSidebar({ commit }, options) {
+    updateSidebar ({ commit }, options) {
       commit('updateSidebar', options)
     },
 

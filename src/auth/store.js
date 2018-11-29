@@ -14,11 +14,20 @@ const auth = {
   state: Object.assign({}, defaults),
 
   mutations: {
-    update(state, data) {
+    update (state, data) {
       state = Object.assign({}, defaults, data)
     },
-    clear() {
+    clear (state) {
       state = Object.assign(state, defaults)
+    }
+  },
+
+  actions: {
+    clear ({ state, commit, rootState, dispatch }) {
+      commit('clear')
+    },
+    update ({ state, commit, rootState }, data) {
+      commit('update', data)
     }
   }
 }

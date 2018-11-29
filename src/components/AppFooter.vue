@@ -5,8 +5,6 @@
 export default {
   name: 'AppFooter',
 
-  computed: {
-    
-  }
+  computed: {}
 }
 </script>

@@ -6,6 +6,7 @@ import router from './router'
 import auth from './auth'
 import App from './App'
 import AppFooter from './components/AppFooter'
+import myMock from './mock/mock'
 
 Vue.config.productionTip = false
 
@@ -15,6 +16,10 @@ sync(store, router)
 // 安装http和auth
 Vue.use(http)
 Vue.use(auth)
+
+// mockJS拦截API请求
+myMock.intercept()
+myMock.setup()
 
 // 注册全局组件
 Vue.component('AppFooter', AppFooter)

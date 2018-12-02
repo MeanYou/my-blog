@@ -9,6 +9,7 @@
 <script>
 import PublicLayout from '@/layouts/public/main.vue'
 import DefaultLayout from '@/layouts/default/main.vue'
+import './assets/style/common.less'
 
 export default {
   name: 'app',
@@ -37,7 +38,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

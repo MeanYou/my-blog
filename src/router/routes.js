@@ -10,7 +10,7 @@ const routes = [
   {
     name: 'home',
     path: '/',
-    component: () => import('@/features/blog/main.vue'),
+    component: () => import('@/features/resume/main.vue'),
     title: '我的博客',
     layout: 'DefaultLayout',
     isPublic: true

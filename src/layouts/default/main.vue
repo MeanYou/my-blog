@@ -1,9 +1,11 @@
 <template>
-  <div class="container">
+  <div class="main">
     <app-nav></app-nav>
-    <transition name="slide" mode="out-in">
-      <router-view></router-view>
-    </transition>
+    <div class="main__content">
+      <transition name="slide" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </div>
     <app-footer></app-footer>
   </div>
 </template>
@@ -23,3 +25,16 @@ export default {
   }
 }
 </script>
+
+<style type="less">
+  .main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    .main__content {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>

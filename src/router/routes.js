@@ -35,7 +35,7 @@ const routes = [
     name: 'account',
     path: '/account',
     component: () => import('@/features/account/main.vue'),
-    title: '账户信息',
+    title: '个人中心',
     layout: 'DefaultLayout',
     isPublic: false
   }

@@ -3,17 +3,14 @@
     <div class="nav-container">
       <img class="nav-container__logo" src="@/assets/logo.png"/>
       <ul class="nav-container__menu">
-        <li class="nav-container__menu__item">
+        <li class="nav-container__menu__item" @click="$router.push('/')">
           <a href="javascript:void(0);">博客</a>
         </li>
-        <li class="nav-container__menu__item">
+        <li class="nav-container__menu__item" @click="$router.push('/resume')">
           <a href="javascript:void(0);">简历</a>
         </li>
-        <li class="nav-container__menu__item">
+        <li class="nav-container__menu__item" @click="$router.push('/account')">
           <a href="javascript:void(0);">个人中心</a>
-        </li>
-        <li class="nav-container__menu__item">
-          <a href="javascript:void(0);">博客</a>
         </li>
       </ul>
     </div>
@@ -71,7 +68,7 @@
           background-color: transparent;
           float: left;
           cursor: pointer;
-          border-bottom: 2px solid yellow;
+          border-bottom: 2px solid transparent;
           -webkit-transition: all 350ms ease-in-out;
           -moz-transition: all 350ms ease-in-out;
           -o-transition: all 350ms ease-in-out;
@@ -91,6 +88,7 @@
         }
         .nav-container__menu__item:hover {
           background-color: #EEE;
+          border-color: #000;
 
           a {
             color: #7CB14A;

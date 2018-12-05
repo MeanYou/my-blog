@@ -5,8 +5,8 @@ import { http } from './http'
 import router from './router'
 import auth from './auth'
 import App from './App'
-import AppFooter from './components/AppFooter'
 import myMock from './mock/mock'
+import registDirective from './util/directive'
 
 Vue.config.productionTip = false
 
@@ -21,8 +21,11 @@ Vue.use(auth)
 myMock.intercept()
 myMock.setup()
 
+// 注册自定义指令
+registDirective()
+
 // 注册全局组件
-Vue.component('AppFooter', AppFooter)
+// Vue.component('AppFooter', AppFooter)
 
 /* eslint-disable no-new */
 new Vue({

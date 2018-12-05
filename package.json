@@ -18,6 +18,7 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "animate.css": "^3.7.0",
     "autoprefixer": "^7.1.5",
     "axios": "^0.18.0",
     "babel-core": "^6.26.0",

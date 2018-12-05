@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="project" v-animate="{type: 'bounce', trigger: 'mouseover'}">
     <div>{{title}}</div>
     <div>{{desc}}</div>
   </div>
@@ -13,9 +13,21 @@
 
       }
     },
-    props: ['title', 'desc'],
+    props: {
+      title: {
+        require: true,
+        type: String
+      },
+      desc: {
+        type: String
+      }
+    },
     methods: {
 
     }
   }
 </script>
+
+<style>
+  
+</style>

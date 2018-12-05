@@ -1,5 +1,5 @@
 <template>
-  <div class="project" v-animate="{type: 'bounce', trigger: 'mouseover'}">
+  <div class="project" v-animate="{type: 'bounce', trigger: 'mouseenter'}">
     <div>{{title}}</div>
     <div>{{desc}}</div>
   </div>
@@ -29,5 +29,7 @@
 </script>
 
 <style>
-  
+  .project {
+    
+  }
 </style>

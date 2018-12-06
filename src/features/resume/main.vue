@@ -1,7 +1,7 @@
 <template>
   <div class="main__content__in">
     <div class="projects">
-      <project-item v-for="item in projects" :key="item.id" :title="item.title" :desc="item.desc"></project-item>
+      <project-item v-for="(item, index) in projects" :key="item.id" :float="index%2 === 0 ? 'left' : 'right'" :title="item.title" :desc="item.desc"></project-item>
     </div>
     <div class="skills">skills</div>
     <div class="education">education</div>
@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
   .main__content__in {
     width: 1200px;
     height: auto;
@@ -50,8 +50,8 @@ export default {
     left: 50%;
     margin-left: -600px;
 
-    .resume {
-
+    .projects {
+      margin-top: 100px;
     }
   }
 </style>

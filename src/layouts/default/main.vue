@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style type="less">
+<style lang="less">
   .main {
     width: 100%;
     height: 100%;

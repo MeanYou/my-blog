@@ -1,8 +1,10 @@
 <template>
-  <div class="project-container clear">
+  <div class="resume-container clear">
     <div :class="classList" v-animate="{type: 'flipInX', trigger: 'mouseenter'}">
-      <div class="project-item__title">{{title}}</div>
-      <div class="project-item__desc">{{desc}}</div>
+      <div class="resume-item__title">{{title}}</div>
+      <div class="resume-item__desc">
+        <slot></slot>
+      </div>
     </div>
   </div>
   
@@ -10,7 +12,7 @@
 
 <script>
   export default {
-    name: 'project-item',
+    name: 'resume-item',
     data () {
       return {
 
@@ -24,14 +26,11 @@
       title: {
         require: true,
         type: String
-      },
-      desc: {
-        type: String
       }
     },
     computed: {
       classList () {
-        return 'project-item ' + (this.float === 'left' ? 'project-item--left' : 'project-item--right')
+        return 'resume-item ' + (this.float === 'left' ? 'resume-item--left' : 'resume-item--right')
       }
     },
     methods: {
@@ -44,11 +43,11 @@
 </script>
 
 <style lang="less">
-  .project-container {
+  .resume-container {
     width: 100%;
     margin-top: -30px;
   }
-  .project-item {
+  .resume-item {
     box-sizing: border-box;
     width: 480px;
     border-radius: 10px;
@@ -56,19 +55,19 @@
     background-color: #EEE;
     position: relative;
 
-    .project-item__title {
+    .resume-item__title {
       font-size: 22px;
       font-weight: 600;
       margin-bottom: 20px;
     }
-    .project-item__desc {
+    .resume-item__desc {
       font-size: 16px;
       color: #333;
       line-height: 24px;
     }
   }
 
-  .project-item--left {
+  .resume-item--left {
     float: left;
     margin-left: 50px;
 
@@ -85,7 +84,7 @@
     }
   }
 
-  .project-item--right {
+  .resume-item--right {
     float: right;
     margin-right: 50px;
 

@@ -28,8 +28,8 @@ export default function registDirective () {
           el.classList.remove(speed)
         }, speedObj[speed])
       })
-      console.log(el.classList)
-      console.log(binding)
+      // console.log(el.classList)
+      // console.log(binding)
     },
     inserted (el, binding, vnode, oldVnode) {
 

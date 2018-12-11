@@ -1,22 +1,50 @@
 <template>
   <div class="main__content__in">
-    <div class="projects">
-      <project-item v-for="(item, index) in projects" :key="item.id" :float="index%2 === 0 ? 'left' : 'right'" :title="item.title" :desc="item.desc"></project-item>
+    <feature-catalog :catalogs="catalogs"></feature-catalog>
+    <div class="projects" id="projects">
+      <resume-item v-for="(item, index) in projects" :key="item.id" :float="index%2 === 0 ? 'left' : 'right'" :title="item.title">
+        {{item.desc}}
+      </resume-item>
     </div>
-    <div class="skills">skills</div>
-    <div class="education">education</div>
+    <div class="skills" id="skills">
+      <resume-item v-for="(item, index) in skills" :key="item.id" :float="index%2 === 0 ? 'left' : 'right'" :title="item.title">
+        {{item.desc}}
+      </resume-item>
+    </div>
+    <div class="education" id="education">education</div>
   </div>
 </template>
 
 <script>
-import ProjectItem from './ProjectItem'
+import util from '@/util'
+
+import ResumeItem from './ResumeItem'
+import FeatureCatalog from '@/components/FeatureCatalog'
+
 export default {
   name: 'resume',
   data () {
     return {
+      catalogs: [
+        {
+          id: 'projects',
+          title: '项目经验',
+          img: ''
+        },
+        {
+          id: 'skills',
+          title: '专业技能',
+          img: ''
+        },
+        {
+          id: 'education',
+          title: '教育经历',
+          img: ''
+        }
+      ],
       projects: [
         {
-          id: 0,
+          id: util.uuid(),
           title: '1',
           desc: '1',
           imgs: [
@@ -24,20 +52,33 @@ export default {
           ]
         },
         {
-          id: 1,
+          id: util.uuid(),
           title: '1',
           desc: '1'
         },
         {
-          id: 2,
+          id: util.uuid(),
           title: '1',
           desc: '1'
+        }
+      ],
+      skills: [
+        {
+          id: util.uuid(),
+          title: 'JavaScript',
+          proficiency: '熟练'
+        },
+        {
+          id: util.uuid(),
+          title: 'JavaScript',
+          proficiency: ''
         }
       ]
     }
   },
   components: {
-    ProjectItem
+    ResumeItem,
+    FeatureCatalog
   }
 }
 </script>

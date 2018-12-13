@@ -13,7 +13,7 @@
     },
     props: {
       href: {
-        require: true,
+        required: true,
         type: String,
         default: '111'
       }

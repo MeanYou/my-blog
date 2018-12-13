@@ -36,6 +36,14 @@ export default {
       width: 100%;
       height: auto;
       position: relative;
+
+      .main__content__in {
+        width: 1200px;
+        height: auto;
+        position: relative;
+        left: 50%;
+        margin-left: -600px;
+      }
     }
   }
 </style>

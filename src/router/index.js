@@ -20,22 +20,33 @@ function guardRoute (to, from, next) {
 
 const router = new Router({
   base: '/',
-  routes: routes.map(route => ({
-    name: route.name,
-    path: route.path,
-    component: route.component,
-    beforeEnter: (to, from, next) => {
-      // 进入路由之前的钩子，进行一些设置
-      // document.title = route.title
-      store.dispatch('common/updateTitle', route.title)
-      store.dispatch('common/updateLayout', route.layout)
+  routes: routes.map(route => {
+    if (route.redirect) {
+      return {
+        name: route.name,
+        path: route.path,
+        redirect: route.redirect
+      }
+    } else {
+      return {
+        name: route.name,
+        path: route.path,
+        component: route.component,
+        children: route.children || null,
+        beforeEnter: (to, from, next) => {
+          // 进入路由之前的钩子，进行一些设置
+          // document.title = route.title
+          store.dispatch('common/updateTitle', route.title)
+          store.dispatch('common/updateLayout', route.layout)
 
-      // 未认证页面进入守卫路由跳转到登录页
-      if (!route.isPublic) return guardRoute(to, from, next)
+          // 未认证页面进入守卫路由跳转到登录页
+          if (!route.isPublic) return guardRoute(to, from, next)
 
-      next()
+          next()
+        }
+      }
     }
-  }))
+  })
 })
 
 export default router

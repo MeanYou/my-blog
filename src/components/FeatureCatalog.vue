@@ -21,7 +21,7 @@ export default {
   },
   props: {
     catalogs: {
-      require: true,
+      required: true,
       type: Array
     }
   },

@@ -24,8 +24,8 @@
         default: 'left'
       },
       title: {
-        require: true,
-        type: String
+        type: String,
+        required: true
       }
     },
     computed: {
@@ -76,6 +76,8 @@
       display: block;
       width: 60px;
       height: 60px;
+      box-sizing: border-box;
+      border: 4px solid #FFF;
       border-radius: 30px;
       background-color: #EEE;
       position: absolute;
@@ -93,6 +95,8 @@
       display: block;
       width: 60px;
       height: 60px;
+      border: 4px solid #FFF;
+      box-sizing: border-box;
       border-radius: 30px;
       background-color: #EEE;
       position: absolute;

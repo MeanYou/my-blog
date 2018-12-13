@@ -3,7 +3,7 @@
     <div class="nav-container">
       <img class="nav-container__logo" src="@/assets/logo.png"/>
       <ul class="nav-container__menu">
-        <li class="nav-container__menu__item" @click="$router.push('/')">
+        <li class="nav-container__menu__item" @click="$router.push('/blog')">
           <a href="javascript:void(0);">博客</a>
         </li>
         <li class="nav-container__menu__item" @click="$router.push('/resume')">
